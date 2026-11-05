@@ -13,6 +13,7 @@ export class Toast {
     if (!this.container) {
       this.container = document.createElement('div');
       this.container.className = 'toast-container';
+      this.container.id = 'toast-container';
       document.body.appendChild(this.container);
     }
 

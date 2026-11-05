@@ -191,6 +191,42 @@
 /* =========================================
    1. SUDOKU STYLES
    ========================================= */
+:root {
+  --sudoku-border-thin: #CBD5E1;
+  --sudoku-border-thick: #243A73;
+  --sudoku-grid-bg: #CBD5E1;
+  --sudoku-cell-bg: #FFFFFF;
+  --sudoku-clue-bg: #E8F0FB;
+  --sudoku-clue-color: #243A73;
+  --sudoku-player-color: #2563EB;
+  --sudoku-selected-bg: #CBEFFA;
+  --sudoku-selected-border: #0284C7;
+  --sudoku-highlight-bg: #F0F5FD;
+  --sudoku-clue-highlight-bg: #DFEBFB;
+  --sudoku-same-num-bg: #DBEAFE;
+  --sudoku-error-bg: #FEE2E2;
+  --sudoku-error-color: #B91C1C;
+  --sudoku-note-color: #475569;
+}
+
+[data-theme='dark'] {
+  --sudoku-border-thin: #334155;
+  --sudoku-border-thick: #3B82F6;
+  --sudoku-grid-bg: #334155;
+  --sudoku-cell-bg: #1E2A3D;
+  --sudoku-clue-bg: #2A3B55;
+  --sudoku-clue-color: #F8FAFC;
+  --sudoku-player-color: #A1E3F9;
+  --sudoku-selected-bg: #32536A;
+  --sudoku-selected-border: #A1E3F9;
+  --sudoku-highlight-bg: #273951;
+  --sudoku-clue-highlight-bg: #314666;
+  --sudoku-same-num-bg: #2C4260;
+  --sudoku-error-bg: #572C39;
+  --sudoku-error-color: #FF9B9B;
+  --sudoku-note-color: #94A3B8;
+}
+
 .sudoku-board-container {
   display: flex;
   flex-direction: column;
@@ -206,75 +242,98 @@
   grid-template-rows: repeat(9, 1fr);
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: #243A73;
-  border: 3px solid #243A73;
+  background: var(--sudoku-grid-bg);
+  border: 3px solid var(--sudoku-border-thick);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
-}
-
-[data-theme='dark'] .sudoku-grid {
-  background: #3B82F6;
-  border-color: #3B82F6;
+  box-sizing: border-box;
 }
 
 .sudoku-cell {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: var(--sudoku-cell-bg);
+  border-right: 1px solid var(--sudoku-border-thin);
+  border-bottom: 1px solid var(--sudoku-border-thin);
+  border-top: none;
+  border-left: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: clamp(16px, 4vw, 24px);
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--sudoku-player-color);
   cursor: pointer;
   position: relative;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
   user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
 }
 
 /* Thick 3x3 block borders */
+.sudoku-cell[data-col="2"],
+.sudoku-cell[data-col="5"],
 .sudoku-cell:nth-child(3n) {
-  border-right: 2px solid var(--primary-color);
+  border-right: 2px solid var(--sudoku-border-thick);
 }
+
+.sudoku-cell[data-col="8"],
 .sudoku-cell:nth-child(9n) {
   border-right: none;
 }
+
 .sudoku-cell[data-row="2"],
 .sudoku-cell[data-row="5"] {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--sudoku-border-thick);
 }
 
+.sudoku-cell[data-row="8"] {
+  border-bottom: none;
+}
+
+/* Clue Cells */
 .sudoku-cell.clue {
+  background: var(--sudoku-clue-bg);
+  color: var(--sudoku-clue-color);
   font-weight: 800;
-  color: var(--primary-color);
-  background: rgba(36, 58, 115, 0.05);
-}
-[data-theme='dark'] .sudoku-cell.clue {
-  color: var(--accent-color);
-  background: rgba(161, 227, 249, 0.06);
 }
 
+/* Player-Entered Cells */
+.sudoku-cell.player-entered {
+  color: var(--sudoku-player-color);
+  font-weight: 700;
+}
+
+/* Highlighted (Row, Column, Box) */
+.sudoku-cell.highlighted:not(.clue) {
+  background: var(--sudoku-highlight-bg);
+}
+
+/* Same Number */
+.sudoku-cell.same-number {
+  background: var(--sudoku-same-num-bg);
+}
+
+.sudoku-cell.clue.same-number {
+  background: var(--sudoku-same-num-bg);
+  color: var(--sudoku-clue-color);
+}
+
+/* Selected Cell */
 .sudoku-cell.selected {
-  background: rgba(161, 227, 249, 0.35) !important;
-  outline: 2px solid var(--accent-color);
+  background: var(--sudoku-selected-bg) !important;
+  outline: 2px solid var(--sudoku-selected-border);
+  outline-offset: -2px;
   z-index: 2;
 }
 
-.sudoku-cell.highlighted {
-  background: rgba(36, 58, 115, 0.08);
-}
-[data-theme='dark'] .sudoku-cell.highlighted {
-  background: rgba(161, 227, 249, 0.12);
-}
-
-.sudoku-cell.same-number {
-  background: rgba(161, 227, 249, 0.22);
-}
-
+/* Error Cell */
 .sudoku-cell.error {
-  color: #EF4444 !important;
-  background: rgba(239, 68, 68, 0.18) !important;
+  background: var(--sudoku-error-bg) !important;
+  color: var(--sudoku-error-color) !important;
+  outline: 2px solid #EF4444;
+  outline-offset: -2px;
+  z-index: 3;
 }
 
 .sudoku-notes-grid {

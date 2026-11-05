@@ -11,6 +11,12 @@ test.describe('MoPuzzle 3 — Documentation Screenshots', () => {
     await page.waitForSelector('#sudoku-grid');
     await page.screenshot({ path: 'docs/screenshots/sudoku.png' });
 
+    // 2b. Sudoku Dark Mode
+    await page.click('#theme-toggle-btn');
+    await page.waitForTimeout(200);
+    await page.screenshot({ path: 'docs/screenshots/sudoku-dark.png' });
+    await page.click('#theme-toggle-btn'); // toggle back
+
     // 3. Minesweeper
     await page.goto('/#play?game=minesweeper&level=1');
     await page.waitForSelector('#mines-grid');

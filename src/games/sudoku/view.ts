@@ -158,7 +158,11 @@ export class SudokuView {
             Math.floor(c / 3) === Math.floor(sel.col / 3));
 
         const classes = ['sudoku-cell'];
-        if (cell.isClue) classes.push('clue');
+        if (cell.isClue) {
+          classes.push('clue');
+        } else if (cell.value !== 0) {
+          classes.push('player-entered');
+        }
         if (isSelected) classes.push('selected');
         else if (isSameNumber) classes.push('same-number');
         else if (isRowColBox) classes.push('highlighted');

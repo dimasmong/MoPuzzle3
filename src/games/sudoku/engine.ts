@@ -33,6 +33,7 @@ export class SudokuEngine {
       this.mistakesCount = savedState.mistakesCount ?? 0;
       this.selectedRow = savedState.selectedRow ?? 0;
       this.selectedCol = savedState.selectedCol ?? 0;
+      this.checkErrors();
       return;
     }
 
