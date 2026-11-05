@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142244" />
+      <stop offset="50%" stop-color="#243A73" />
+      <stop offset="100%" stop-color="#0E172E" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C2F0FC" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE7B7" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4B5FD" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="crateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Outer Squircle Plate -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect x="12" y="12" width="488" height="488" rx="100" fill="none" stroke="url(#accentGrad)" stroke-width="4" stroke-opacity="0.35" />
+
+  <!-- 6-tile Puzzle Matrix representing the 6 games -->
+  <g transform="translate(64, 64)" filter="url(#glow)">
+    <!-- 1. Top-Left: Sudoku (3x3 mini grid with number 3) -->
+    <rect x="16" y="16" width="160" height="160" rx="24" fill="#1E2E52" stroke="#334B80" stroke-width="3" />
+    <path d="M 69 28 L 69 164 M 123 28 L 123 164 M 28 69 L 164 69 M 28 123 L 164 123" stroke="#4665A2" stroke-width="2" stroke-linecap="round" stroke-opacity="0.6" />
+    <text x="96" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" fill="url(#accentGrad)" text-anchor="middle">3</text>
+
+    <!-- 2. Top-Right: Minesweeper (flag & diamond cell) -->
+    <rect x="208" y="16" width="160" height="160" rx="24" fill="#1E2E52" stroke="#334B80" stroke-width="3" />
+    <!-- Flag base & pole -->
+    <line x1="260" y1="136" x2="316" y2="136" stroke="#94A3B8" stroke-width="5" stroke-linecap="round" />
+    <line x1="288" y1="44" x2="288" y2="136" stroke="#CBD5E1" stroke-width="5" stroke-linecap="round" />
+    <!-- Flag banner -->
+    <path d="M 288 48 L 240 68 L 288 88 Z" fill="#EF4444" stroke="#DC2626" stroke-width="2" />
+    <!-- Small mine spark -->
+    <circle cx="332" cy="56" r="4" fill="#FBBF24" />
+
+    <!-- 3. Mid-Left: Pipe Connect (neon pipe bend) -->
+    <rect x="16" y="208" width="160" height="160" rx="24" fill="#1E2E52" stroke="#334B80" stroke-width="3" />
+    <path d="M 96 208 L 96 288 Q 96 304 112 304 L 176 304" fill="none" stroke="url(#accentGrad)" stroke-width="22" stroke-linecap="round" />
+    <path d="M 96 208 L 96 288 Q 96 304 112 304 L 176 304" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.8" />
+    <!-- Pulse dot -->
+    <circle cx="96" cy="248" r="8" fill="#67E8F9" />
+
+    <!-- 4. Mid-Right: Box Pusher (Sokoban crate) -->
+    <rect x="208" y="208" width="160" height="160" rx="24" fill="url(#crateGrad)" stroke="#78350F" stroke-width="3" />
+    <rect x="224" y="224" width="128" height="128" rx="12" fill="none" stroke="#78350F" stroke-width="4" />
+    <line x1="224" y1="224" x2="352" y2="352" stroke="#78350F" stroke-width="5" />
+    <line x1="352" y1="224" x2="224" y2="352" stroke="#78350F" stroke-width="5" />
+    <circle cx="288" cy="288" r="8" fill="#FEF3C7" />
+  </g>
+
+  <!-- Bottom Banner: Memory Flip & Lights Out Combined Crest with Roman/Arabic III -->
+  <g transform="translate(64, 400)">
+    <rect x="16" y="0" width="352" height="64" rx="20" fill="#14203D" stroke="#3B82F6" stroke-width="2.5" />
+    <!-- Memory Pair cards icon -->
+    <rect x="42" y="14" width="26" height="36" rx="6" fill="url(#purpleGrad)" />
+    <rect x="74" y="14" width="26" height="36" rx="6" fill="url(#purpleGrad)" />
+    <circle cx="55" cy="32" r="5" fill="#FFFFFF" />
+    <circle cx="87" cy="32" r="5" fill="#FFFFFF" />
+
+    <!-- Lights Out illuminated toggle matrix -->
+    <circle cx="140" cy="32" r="9" fill="#10B981" />
+    <circle cx="166" cy="32" r="9" fill="#FBBF24" />
+    <circle cx="192" cy="32" r="9" fill="#10B981" />
+
+    <!-- MoPuzzle 3 Wordmark Tag -->
+    <text x="290" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="900" fill="#F8FAFC" letter-spacing="1">MOPUZZLE 3</text>
+  </g>
+</svg>

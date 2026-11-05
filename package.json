@@ -1,0 +1,44 @@
+{
+  "name": "mopuzzle3",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MoPuzzle 3 — Six Complete Browser Puzzle Games: Sudoku, Minesweeper, Pipe Connect, Box Pusher, Memory Flip, and Lights Out.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^22.13.10",
+    "happy-dom": "^21.0.4",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
+  },
+  "keywords": [
+    "puzzle-game",
+    "browser-game",
+    "html5",
+    "typescript",
+    "vite",
+    "sudoku",
+    "minesweeper",
+    "pipe-puzzle",
+    "sokoban",
+    "memory-game",
+    "lights-out",
+    "pwa",
+    "vercel"
+  ],
+  "author": "Dimas Mong",
+  "license": "MIT"
+}

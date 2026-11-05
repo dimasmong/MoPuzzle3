@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="pwaBg512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142244" />
+      <stop offset="50%" stop-color="#243A73" />
+      <stop offset="100%" stop-color="#0E172E" />
+    </linearGradient>
+    <linearGradient id="pwaAcc512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C2F0FC" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#pwaBg512)" />
+  <rect x="12" y="12" width="488" height="488" rx="100" fill="none" stroke="url(#pwaAcc512)" stroke-width="6" stroke-opacity="0.35" />
+  <!-- M 3 big glyph -->
+  <path d="M 110 340 L 110 172 L 176 256 L 242 172 L 242 340" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="360" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="200" font-weight="900" fill="url(#pwaAcc512)" text-anchor="middle">3</text>
+  <text x="256" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#94A3B8" letter-spacing="4" text-anchor="middle">MOPUZZLE 3</text>
+</svg>

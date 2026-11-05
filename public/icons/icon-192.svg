@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="pwaBg192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142244" />
+      <stop offset="100%" stop-color="#243A73" />
+    </linearGradient>
+    <linearGradient id="pwaAcc192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C2F0FC" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#pwaBg192)" />
+  <rect x="6" y="6" width="180" height="180" rx="36" fill="none" stroke="url(#pwaAcc192)" stroke-width="3" stroke-opacity="0.4" />
+  <!-- M 3 symbol -->
+  <path d="M 44 130 L 44 62 L 70 96 L 96 62 L 96 130" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="142" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" fill="url(#pwaAcc192)" text-anchor="middle">3</text>
+</svg>
