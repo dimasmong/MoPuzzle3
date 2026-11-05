@@ -1,5 +1,9 @@
 # MoPuzzle 3
 
+<p align="center">
+  <img src="public/icons/logo.svg" width="104" height="104" alt="MoPuzzle 3 Puzzle Six Emblem" />
+</p>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/dimasmong/MoPuzzle3/actions/workflows/ci.yml/badge.svg)](https://github.com/dimasmong/MoPuzzle3/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript)](https://www.typescriptlang.org/)

@@ -1,17 +1,151 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" aria-hidden="true">
   <defs>
-    <linearGradient id="pwaBg192" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#142244" />
-      <stop offset="100%" stop-color="#243A73" />
+    <!-- Background Gradient -->
+    <linearGradient id="p6Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="45%" stop-color="#1E2E56" />
+      <stop offset="100%" stop-color="#0A1020" />
     </linearGradient>
-    <linearGradient id="pwaAcc192" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C2F0FC" />
-      <stop offset="100%" stop-color="#38BDF8" />
+
+    <!-- Outer Frame Stroke -->
+    <linearGradient id="p6Frame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A1E3F9" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#A1E3F9" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Center Glow -->
+    <radialGradient id="p6Core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A1E3F9" />
+      <stop offset="55%" stop-color="#243A73" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </radialGradient>
+
+    <!-- Sector Gradients -->
+    
+    <linearGradient id="p6Grad_sudoku" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="p6Grad_pipe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="p6Grad_lights" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="p6Grad_memory" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <linearGradient id="p6Grad_box" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="p6Grad_mines" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F87171" />
+      <stop offset="100%" stop-color="#DC2626" />
     </linearGradient>
   </defs>
-  <rect width="192" height="192" rx="42" fill="url(#pwaBg192)" />
-  <rect x="6" y="6" width="180" height="180" rx="36" fill="none" stroke="url(#pwaAcc192)" stroke-width="3" stroke-opacity="0.4" />
-  <!-- M 3 symbol -->
-  <path d="M 44 130 L 44 62 L 70 96 L 96 62 L 96 130" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-  <text x="142" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" fill="url(#pwaAcc192)" text-anchor="middle">3</text>
+
+  <!-- Base Badge -->
+  <rect width="128" height="128" rx="28" fill="url(#p6Bg)" />
+  <rect x="3.5" y="3.5" width="121" height="121" rx="24.5" fill="none" stroke="url(#p6Frame)" stroke-width="2" />
+
+  <!-- Outer Orbit Guide Ring -->
+  <circle cx="64" cy="64" r="51.5" fill="none" stroke="#A1E3F9" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="2 3" />
+
+  <!-- 6 Interconnected Puzzle Segments -->
+  <g id="emblem-sectors">
+    
+    <path d="M 56.15 49.49
+        A 16.5 16.5 0 0 1 71.85 49.49
+        L 87.07 21.34
+        A 48.5 48.5 0 0 0 40.93 21.34
+        Z" fill="url(#p6Grad_sudoku)" stroke="#0F172A" stroke-width="1.2" />
+    <path d="M 72.65 49.95
+        A 16.5 16.5 0 0 1 80.49 63.54
+        L 112.48 62.65
+        A 48.5 48.5 0 0 0 89.41 22.69
+        Z" fill="url(#p6Grad_pipe)" stroke="#0F172A" stroke-width="1.2" />
+    <path d="M 80.49 64.46
+        A 16.5 16.5 0 0 1 72.65 78.05
+        L 89.41 105.31
+        A 48.5 48.5 0 0 0 112.48 65.35
+        Z" fill="url(#p6Grad_lights)" stroke="#0F172A" stroke-width="1.2" />
+    <path d="M 71.85 78.51
+        A 16.5 16.5 0 0 1 56.15 78.51
+        L 40.93 106.66
+        A 48.5 48.5 0 0 0 87.07 106.66
+        Z" fill="url(#p6Grad_memory)" stroke="#0F172A" stroke-width="1.2" />
+    <path d="M 55.35 78.05
+        A 16.5 16.5 0 0 1 47.51 64.46
+        L 15.52 65.35
+        A 48.5 48.5 0 0 0 38.59 105.31
+        Z" fill="url(#p6Grad_box)" stroke="#0F172A" stroke-width="1.2" />
+    <path d="M 47.51 63.54
+        A 16.5 16.5 0 0 1 55.35 49.95
+        L 38.59 22.69
+        A 48.5 48.5 0 0 0 15.52 62.65
+        Z" fill="url(#p6Grad_mines)" stroke="#0F172A" stroke-width="1.2" />
+  </g>
+
+  
+  <!-- ==============================================
+       GAME-SPECIFIC ICONIC MOTIFS
+       ============================================== -->
+  <!-- 1. Sudoku: 2x2 Logic Grid (Top) -->
+  <g transform="translate(64, 33)">
+    <rect x="-8" y="-6.5" width="7" height="5.5" rx="1.5" fill="#FFFFFF" />
+    <rect x="1" y="-6.5" width="7" height="5.5" rx="1.5" fill="#93C5FD" />
+    <rect x="-8" y="1" width="7" height="5.5" rx="1.5" fill="#93C5FD" />
+    <rect x="1" y="1" width="7" height="5.5" rx="1.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- 2. Pipe Connect: Conduit Curve (Top-Right) -->
+  <g transform="translate(90.5, 48)">
+    <path d="M -6 -5 A 9 9 0 0 1 5 4" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+    <circle cx="5" cy="4" r="2.5" fill="#67E8F9" />
+  </g>
+
+  <!-- 3. Lights Out: Radiant 4-Point Star (Bottom-Right) -->
+  <g transform="translate(90.5, 80)">
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#FFFFFF" />
+    <circle cx="0" cy="0" r="1.8" fill="#FDE68A" />
+  </g>
+
+  <!-- 4. Memory Flip: Dual Overlapping Cards (Bottom) -->
+  <g transform="translate(64, 95)">
+    <!-- Back Card (Shifted/Rotated) -->
+    <rect x="-8" y="-5.5" width="9" height="11" rx="2" fill="#5B21B6" stroke="#DDD6FE" stroke-width="0.8" transform="rotate(-14)" />
+    <!-- Front Card (Revealed) -->
+    <rect x="-1" y="-5.5" width="9" height="11" rx="2" fill="#FFFFFF" stroke="#A78BFA" stroke-width="0.8" transform="rotate(8)" />
+    <circle cx="3.5" cy="0" r="2" fill="#7C3AED" />
+  </g>
+
+  <!-- 5. Box Pusher: Movable Crate & Target Bracket (Bottom-Left) -->
+  <g transform="translate(37.5, 80)">
+    <!-- Target Corner Bracket -->
+    <path d="M -6.5 6.5 L -6.5 -2.5 L 2.5 -2.5" fill="none" stroke="#A7F3D0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Crate -->
+    <rect x="-3" y="-1" width="9" height="9" rx="1.5" fill="#FFFFFF" stroke="#047857" stroke-width="1" />
+    <!-- Crate Cross -->
+    <line x1="-3" y1="-1" x2="6" y2="8" stroke="#10B981" stroke-width="1" />
+  </g>
+
+  <!-- 6. Minesweeper: Detection Flag & Safe Node (Top-Left) -->
+  <g transform="translate(37.5, 48)">
+    <line x1="-3" y1="-7" x2="-3" y2="6" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" />
+    <polygon points="-3,-7 5,-3 -3,1" fill="#FFFFFF" />
+    <circle cx="-3" cy="6" r="2" fill="#FECACA" />
+  </g>
+  
+
+  <!-- ==============================================
+       CENTRAL LOGIC CORE HUB
+       ============================================== -->
+  <circle cx="64" cy="64" r="15" fill="url(#p6Core)" stroke="#A1E3F9" stroke-width="2.5" />
+  <circle cx="64" cy="64" r="6.5" fill="#FFFFFF" />
+  <circle cx="64" cy="64" r="3" fill="#243A73" />
 </svg>

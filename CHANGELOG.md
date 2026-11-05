@@ -3,6 +3,35 @@
 All notable changes to **MoPuzzle 3** are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-11-05
+
+### Changed
+- **Brand Identity Redesign — Puzzle Six Emblem**:
+  - Replaced the legacy generic "M3" letter monogram with the original, professionally designed **Puzzle Six Emblem**.
+  - Cohesive geometric emblem uniting all six logic games in an interconnected, balanced puzzle ring:
+    - **Sudoku**: 2×2 number-grid matrix geometry.
+    - **Pipe Connect**: Sleek curved conduit with flowing connection node.
+    - **Lights Out**: Radiant 4-point illuminated star tile with warm gold accents.
+    - **Memory Flip**: Dual overlapping, angled card silhouettes.
+    - **Box Pusher**: Movable crate cube with corner target bracket.
+    - **Minesweeper**: Deduction flag beacon with safe coordinate base.
+  - Balanced brand palette: Primary `#243A73`, Accent `#A1E3F9`, with subtle game-specific accents (cool blue, teal, warm gold, soft purple, emerald, coral).
+  - High-contrast central logic core hub linking all six segments.
+- **Responsive Logo Variants & Required Assets**:
+  - Master vector SVG (`public/icons/logo.svg`, `public/icons/logo-dark.svg`, `public/icons/logo-light.svg`).
+  - Streamlined compact silhouette for small surfaces (`public/favicon.svg`, `public/favicon.ico`).
+  - High-DPI raster assets generated: PNG 16×16, 32×32, 64×64, 180×180 (Apple Touch Icon), 192×192, 512×512, and 512×512 Maskable PWA icon.
+  - 1200×630 Open Graph / Twitter social preview image (`public/social-preview.png`).
+- **Cache & PWA Refresh**:
+  - Incremented Service Worker cache version to `mopuzzle3-v1.0.1`.
+  - Updated Web App Manifest with maskable and standard PWA icon declarations.
+  - Preserved all player LocalStorage progress and gameplay saves.
+
+### Fixed
+- **Sudoku Light Mode Contrast & Visibility**:
+  - Replaced translucent cell overlays with 100% opaque, high-contrast backgrounds across all cell states in both Light and Dark themes.
+  - Light mode: Clue background `#E8F0FB` with deep navy digits `#243A73`, player digits `#2563EB`, selected `#CBEFFA`, highlights `#F0F5FD`, errors `#FEE2E2` with `#B91C1C`.
+
 ## [1.0.0] - 2026-11-05
 
 ### Added

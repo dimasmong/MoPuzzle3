@@ -1,12 +1,15 @@
-const CACHE_NAME = 'mopuzzle3-v1.0.0';
+const CACHE_NAME = 'mopuzzle3-v1.0.1';
 const STATIC_ASSETS = [
   './',
   './index.html',
   './favicon.svg',
+  './favicon.ico',
   './manifest.webmanifest',
   './icons/logo.svg',
-  './icons/icon-192.svg',
-  './icons/icon-512.svg'
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/icon-512-maskable.png',
+  './apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {

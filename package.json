@@ -1,7 +1,7 @@
 {
   "name": "mopuzzle3",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MoPuzzle 3 — Six Complete Browser Puzzle Games: Sudoku, Minesweeper, Pipe Connect, Box Pusher, Memory Flip, and Lights Out.",
   "type": "module",
   "scripts": {

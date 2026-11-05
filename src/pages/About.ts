@@ -18,7 +18,7 @@ export function renderAboutPage(): string {
           ${Icons.logo}
         </div>
         <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 4px;">${I18n.t('appName')}</h2>
-        <p style="font-size: 13px; color: var(--primary-color); font-weight: 700; margin-bottom: 16px;">v1.0.0 • ${I18n.t('tagline')}</p>
+        <p style="font-size: 13px; color: var(--primary-color); font-weight: 700; margin-bottom: 16px;">v1.0.1 • ${I18n.t('tagline')}</p>
         <p style="font-size: 14px; line-height: 1.6; color: var(--text-main); margin-bottom: 16px; text-align: left;">
           ${I18n.t('aboutP1')}
         </p>
